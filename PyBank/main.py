@@ -19,8 +19,8 @@ min_profit_change = 0
 
 with open(budget_csv) as csvfile:                                   # open csv file
     csv_reader = csv.reader(csvfile, delimiter=",")         
-    # csv_header = next(csvfile)                                      # read the header and skips it
-    next(csvfile)
+    next(csvfile)                                                   # read the header and skips it
+
     for row in csv_reader:
         date = row[0]                                               # read date each row
         profit = int(row[1])                                        # read profit in each row and convert to integer
